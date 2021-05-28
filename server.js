@@ -5,7 +5,9 @@ import dotenv from 'dotenv';
 import clubRoutes from './routes/clubs.routes.js';
 import playerRoutes from './routes/players.routes.js';
 
-const connectionString = 'mongodb://localhost:27017/transfer-market';
+dotenv.config();
+const connectionString =
+  process.env.DB_CONNECTION || 'mongodb://localhost:27017/transfer-market';
 
 mongoose.connect(connectionString, {
   useNewUrlParser: true,

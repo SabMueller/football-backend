@@ -7,7 +7,7 @@ const playerSchema = new mongoose.Schema({
   club: String,
   position: String,
   email: String,
-  skills: String,
+  skills: Array,
   sold: Boolean,
 });
 
